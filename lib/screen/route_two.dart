@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/screen/route_three.dart';
 
 class RouteTwoScreen extends StatelessWidget {
   const RouteTwoScreen({super.key});
@@ -14,11 +15,18 @@ class RouteTwoScreen extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Route Two'),
+            child: Text('back to Route One'),
           ),
-          Center(
-            child: Text('route two'),
-          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => RouteThreeScreen(),
+                ),
+              );
+            },
+            child: Text('go to Route Three'),
+          )
         ],
       ),
     );

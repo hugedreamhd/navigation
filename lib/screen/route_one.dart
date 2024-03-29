@@ -34,17 +34,11 @@ class RouteOneScreen extends StatelessWidget {
             },
             child: Text('go to RouteTwo'),
           ),
-          Center(
-            child: Text('route one'),
-          ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop(456);
             },
             child: Text('back to homescreen'),
-          ),
-          Center(
-            child: Text('route one'),
           ),
         ],
       ),
