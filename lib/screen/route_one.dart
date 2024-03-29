@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:navigation/screen/route_two.dart';
 
 class RouteOneScreen extends StatelessWidget {
   final int number;
@@ -22,6 +23,19 @@ class RouteOneScreen extends StatelessWidget {
           Text(
             number.toString(),
             textAlign: TextAlign.center,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => RouteTwoScreen(),
+                ),
+              );
+            },
+            child: Text('go to RouteTwo'),
+          ),
+          Center(
+            child: Text('route one'),
           ),
           ElevatedButton(
             onPressed: () {
