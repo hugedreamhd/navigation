@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:navigation/screen/route_two.dart';
 
 class RouteOneScreen extends StatelessWidget {
@@ -26,19 +25,19 @@ class RouteOneScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
+              Navigator.of(context).pop(456);
+            },
+            child: Text('back to homescreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (BuildContext context) => RouteTwoScreen(),
                 ),
               );
             },
-            child: Text('go to RouteTwo'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pop(456);
-            },
-            child: Text('back to homescreen'),
+            child: Text('push to RouteTwo'),
           ),
         ],
       ),

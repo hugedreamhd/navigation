@@ -25,7 +25,7 @@ class RouteTwoScreen extends StatelessWidget {
                 ),
               );
             },
-            child: Text('go to Route Three'),
+            child: Text('push to Route Three'),
           )
         ],
       ),
