@@ -20,20 +20,23 @@ class RouteOneScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            number.toString(),
+            'arguments : ${number.toString()}',
             textAlign: TextAlign.center,
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop(456);
             },
-            child: Text('back to homescreen'),
+            child: Text('pop to homescreen'),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (BuildContext context) => RouteTwoScreen(),
+                  settings: RouteSettings(
+                    arguments: 789,
+                  ),
                 ),
               );
             },

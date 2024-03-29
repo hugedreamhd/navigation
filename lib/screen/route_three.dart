@@ -14,7 +14,7 @@ class RouteThreeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('back to RouteTwo'),
+            child: Text('pop to RouteTwo'),
           ),
         ],
       ),
