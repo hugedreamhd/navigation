@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:navigation/screen/home_screen.dart';
 import 'package:navigation/screen/route_one.dart';

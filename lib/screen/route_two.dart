@@ -35,7 +35,7 @@ class RouteTwoScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pushNamed('/three');
+              Navigator.of(context).pushNamed('/three', arguments: 999);
             },
             child: Text('Pust Named'),
           ),

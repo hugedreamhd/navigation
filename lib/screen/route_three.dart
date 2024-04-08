@@ -5,11 +5,17 @@ class RouteThreeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final argument = ModalRoute.of(context)!.settings.arguments;
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            'argument : ${argument}',
+            textAlign: TextAlign.center,
+          ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop();
