@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/layout/main_layout.dart';
 import 'package:navigation/screen/route_two.dart';
 
 class RouteOneScreen extends StatelessWidget {
@@ -6,44 +7,38 @@ class RouteOneScreen extends StatelessWidget {
 
   const RouteOneScreen({
     required this.number,
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Route One'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            'arguments : ${number.toString()}',
-            textAlign: TextAlign.center,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pop(456);
-            },
-            child: Text('pop to homescreen'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => RouteTwoScreen(),
-                  settings: RouteSettings(
-                    arguments: 789,
-                  ),
+    return MainLayout(
+      title: 'route one',
+      children: [
+        Text(
+          'arguments : ${number.toString()}',
+          textAlign: TextAlign.center,
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop(456);
+          },
+          child: Text('pop to homescreen'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) => RouteTwoScreen(),
+                settings: RouteSettings(
+                  arguments: 789,
                 ),
-              );
-            },
-            child: Text('push to RouteTwo'),
-          ),
-        ],
-      ),
+              ),
+            );
+          },
+          child: Text('push to RouteTwo'),
+        ),
+      ],
     );
   }
 }

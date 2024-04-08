@@ -14,7 +14,10 @@ class MainLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        centerTitle: true,
+        title: Text(
+          title,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
