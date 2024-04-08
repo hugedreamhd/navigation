@@ -32,7 +32,13 @@ class RouteTwoScreen extends StatelessWidget {
               );
             },
             child: Text('push to Route Three'),
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/three');
+            },
+            child: Text('Pust Named'),
+          ),
         ],
       ),
     );
