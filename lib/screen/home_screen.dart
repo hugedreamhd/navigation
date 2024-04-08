@@ -8,7 +8,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MainLayout(
+      title: 'Home Screen',
+      children: [
+        
+      ]
+    )    
+    
+    
+    
+    Scaffold(
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -35,4 +44,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class MainLayout {
 }
