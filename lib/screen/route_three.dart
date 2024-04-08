@@ -8,6 +8,9 @@ class RouteThreeScreen extends StatelessWidget {
     final argument = ModalRoute.of(context)!.settings.arguments;
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Route Three'),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,

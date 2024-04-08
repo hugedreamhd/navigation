@@ -9,6 +9,9 @@ class RouteTwoScreen extends StatelessWidget {
     final arguments = ModalRoute.of(context)!.settings.arguments;
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Route Two'),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -38,6 +41,16 @@ class RouteTwoScreen extends StatelessWidget {
               Navigator.of(context).pushNamed('/three', arguments: 999);
             },
             child: Text('Pust Named'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (_) => RouteThreeScreen(),
+                ),
+              );
+            },
+            child: Text('Push Replacement'),
           ),
         ],
       ),

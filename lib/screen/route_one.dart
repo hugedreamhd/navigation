@@ -13,7 +13,7 @@ class RouteOneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text('Route One'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
