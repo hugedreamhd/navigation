@@ -50,14 +50,12 @@ class RouteTwoScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(
-                    builder: (_) => RouteThreeScreen(),
-                  ),
-                  (route) => route.settings.name == '/');
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/three', (route) => route.settings.name == '/');
               //route를 false로 하면 이동 한 후 앞 라우터스택 모두 삭제
               //route를 true로 하면 이동 한 후 route 스택 유지
               //route.settings.name으로 특정 라우트만 삭제 가능
+              //pushNamedAndRemoveUntil을 이용해 특정 route로 바로 이동 가능 삭제 기능은 위랑 같음
             },
             child: Text('Push And Remove Until'),
           ),
